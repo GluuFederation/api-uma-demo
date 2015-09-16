@@ -1,0 +1,1 @@
+This is a simple example of a python script that obtains an RPT token to call a protected API.
