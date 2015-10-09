@@ -1,0 +1,27 @@
+###############################################################################
+# SSL support
+###############################################################################
+
+
+#  This option defines keystore to use for SSL download certificate
+# verification. It is a good idea to have all truster root CA at this keystore
+# Defaults to tomcat SSL keystore (one defined in server.xml)
+cacertsLocation=/usr/java/latest/jre/lib/security/cacerts
+#  If this option is present it will be used as a passphrase to keystore 
+# defined in the cacertsLocation. It is only needed if cacertsLocation is 
+# defined and is protected by password. For default jre cacerts behavior (empty
+# password) - leace commented.  
+#cacertsPassphrase=D+IZwENN451a6PMJri5pLA==
+
+#These options are used for certificates management. 
+#certDir is the location of certificates used in configuration files
+certDir=/etc/certs/
+#certDir is a temporary location for certificates while user performs update procedures
+certDirTemp=/etc/certs/temp
+#servicesRestartTrigger - file to be deleted to trigger restart of appliance services.
+servicesRestartTrigger=/opt/gluu/essential_files/trigger_restart_of_services_delete_me_to_do_so
+
+# set this to "basic" without the quotation to use basic authentication
+# or leave it blank to use oxAuth
+oxtrust.auth.mode=basic
+
